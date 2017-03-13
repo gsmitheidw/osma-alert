@@ -16,7 +16,8 @@ send-mailmessage -to "youraddress@yourdomain" -from "server1 <server1@yourdomain
 $error[0].Exception | Format-List * -Force | Out-File C:\scripts\mailerror.txt -Append
 $error[0].Exception.InnerException | Format-List * -Force | Out-File C:\scripts\mailerror.txt -Append
 
-<# Pre-requisite: setup alert action on each server by running the bellow commands
+<# Pre-requisite: populate alertaction on each server once by running the below list of commands.
+# Full path to powershell may be required and c:\scripts can be changed if required.
 omconfig system alertaction event=powersupply execappath="powershell c:\scripts\omsa-alert.ps1 power_supply_failure"
 omconfig system alertaction event=powersupplywarn execappath="powershell c:\scripts\omsa-alert.ps1 power_supply_warning"
 omconfig system alertaction event=tempwarn execappath="powershell c:\scripts\omsa-alert.ps1 temperature_warning"
