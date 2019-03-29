@@ -11,7 +11,17 @@ If a hardware issue occurs, osma-alert.ps1 is called from openmanage directly wi
 denoting the type of failure which is sent as an e-mail.
 
 Installation:
-Amend both ps1 files as requred and store them to your system in the predefined path or path of your choosing
-in particular for osma-alert.ps1. Note this file and it's path must not changed or the Populate-AlertAction.ps1
-will have to be re-run to ensure the path and naming are consistent.
+
+Amend both ps1 script files as required:
+
+* Set your e-mail recipient address in osma-alert.ps1
+
+* Set your mailserver dns name or ip address in osma-alert.ps1
+
+* Check powershell is on the system path to ensure Populate-AlertAction.ps1 can be run or else edit to provide full path
+
+* Ensure scripts are located in c:\scripts or amend the path as you wish to one of your choosing. Note this path must
+not change after populating with omconfig, or it will fail to be found
+
+
 
